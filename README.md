@@ -1,8 +1,13 @@
 "# android-activity" 
+
+
 Activity Life Cycle
-  onCreate - onStart - onResume - onPause - onStop - onDestroy
+
+onCreate - onStart - onResume - onPause - onStop - onDestroy
+
 Config Change
-  onSavedInstance will call after onPause
+ 
+ onSavedInstance will call after onPause
   onRestoreInstance will call after onStart
   
   Screen Rotation default behaviour is overriden by mentioning
