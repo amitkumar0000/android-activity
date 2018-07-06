@@ -10,6 +10,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.android.activitylifecycle.uidesign.Activity_A;
+import com.android.activitylifecycle.uidesign.Activity_B;
+import com.android.activitylifecycle.uidesign.Activity_C;
+import com.android.activitylifecycle.uidesign.Activity_D;
+import com.android.activitylifecycle.uidesign.Activity_E;
 import com.android.activitylifecycle.utils.Constants;
 
 public class MainActivity extends AppCompatActivity {
@@ -91,6 +95,22 @@ public class MainActivity extends AppCompatActivity {
                         Constants.ACTIVITY_A_REQUEST_CODE);
                 break;
             }
+            case R.id.activityB:{
+                startActivity(new Intent(this,Activity_B.class));
+                break;
+            }
+            case R.id.activityC:{
+                startActivity(new Intent(this,Activity_C.class));
+                break;
+            }
+            case R.id.activityD:{
+                startActivity(new Intent(this,Activity_D.class));
+                break;
+            }
+            case R.id.activityE:{
+                startActivity(new Intent(this,Activity_E.class));
+                break;
+            }
         }
     }
 
@@ -106,15 +126,21 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*
-        Configuration changed can be handled by app by mentioning
-                    android:configChanges="keyboardHidden|orientation" in
-                    activity manifest.
-                    There is list of parameter which trigger config changes :
-                    "navigation", "orientation"	,mcc,"mnc"	,"screenLayout"
-                    "screenSize"	"touchscreen"	"uiMode"
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Log.d(TAG,"onNewIntent");
+    }
 
-         */
+    /*
+            Configuration changed can be handled by app by mentioning
+                        android:configChanges="keyboardHidden|orientation" in
+                        activity manifest.
+                        There is list of parameter which trigger config changes :
+                        "navigation", "orientation"	,mcc,"mnc"	,"screenLayout"
+                        "screenSize"	"touchscreen"	"uiMode"
+
+             */
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
