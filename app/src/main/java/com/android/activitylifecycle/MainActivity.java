@@ -1,5 +1,6 @@
 package com.android.activitylifecycle;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -71,5 +72,21 @@ public class MainActivity extends AppCompatActivity {
 
     public void click(View view){
         textView.setText(String.valueOf(++count));
+    }
+
+    /*
+    Configuration changed can be handled by app by mentioning
+                android:configChanges="keyboardHidden|orientation" in
+                activity manifest.
+                There is list of parameter which trigger config changes :
+                "navigation", "orientation"	,mcc,"mnc"	,"screenLayout"
+                "screenSize"	"touchscreen"	"uiMode"
+
+     */
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        Log.d(Constants.TAG,"onConfigurationChanged");
+
     }
 }
