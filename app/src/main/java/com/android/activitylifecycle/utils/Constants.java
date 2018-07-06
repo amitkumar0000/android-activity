@@ -6,4 +6,5 @@ package com.android.activitylifecycle.utils;
 
 public class Constants {
     public static final String TAG = "ActivityLifeCycle";
+    public static final String COUNT = "COUNT";
 }
