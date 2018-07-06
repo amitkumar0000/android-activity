@@ -80,6 +80,12 @@ public class Activity_E extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Log.d(TAG,"onNewIntent");
+    }
+
     /*
     Configuration changed can be handled by app by mentioning
                 android:configChanges="keyboardHidden|orientation" in
