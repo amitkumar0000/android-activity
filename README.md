@@ -5,6 +5,22 @@ Activity Life Cycle
 
 onCreate - onStart - onResume - onPause - onStop - onDestroy
 
+onCreate :- This is called once on activity Lifecycle to do all initialise that need once.
+
+onStart :- This is place when activity is visible to user, as app prepares for activity to enter foregroung and start
+           interacting. This method is place where user initialize the code that maintain UI.
+
+onResume :-  This is where user start interacting with UI.
+
+onPause :- App move in backgroud
+
+onStop :- This is the place where user can stop any functionality that does not required if app is invisible.
+
+onDestroy :- final cleanup of acivity and activity object is completely removed from memory.
+
+onRestart :- is called after onStop  if activity move from background to foreground and onDestroy is not called.
+            Any intialized happen in onCreate that is deallocated in onStop can reinitalize on onRestart.
+
 Config Change
  
  onSavedInstance will call after onPause
