@@ -12,7 +12,7 @@ onStart :- This is place when activity is visible to user, as app prepares for a
 
 onResume :-  This is where user start interacting with UI.
 
-onPause :- App move in backgroud
+onPause :- App move in backgroud parital invisible ...e.g a dilog box comes in screen,activity is paritally visible
 
 onStop :- This is the place where user can stop any functionality that does not required if app is invisible.
 
