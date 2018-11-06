@@ -20,6 +20,7 @@ onDestroy :- final cleanup of acivity and activity object is completely removed 
 
 onRestart :- is called after onStop  if activity move from background to foreground and onDestroy is not called.
             Any intialized happen in onCreate that is deallocated in onStop can reinitalize on onRestart.
+            For activities that are using raw Cursor objects (instead of creating them through managedQuery(android.net.Uri,                   String[], String, String[], String), this is usually the place where the cursor should be requeried (because                    you had deactivated it in onStop().
 
 Config Change
  
