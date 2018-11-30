@@ -50,3 +50,7 @@ Config Change
  SingleInstance:  Same as SingleTask. This activity will be only activity on Task. 
                   Once activity is created. next time it will be call via onNewIntent
   
+  
+  Question :- Can we have activity without layout
+  Answer :- Yes.  e.g BaseActivity
+  
