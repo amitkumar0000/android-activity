@@ -1,0 +1,11 @@
+ Question :- Can we have activity without layout
+  Answer :- Yes.  e.g BaseActivity
+  
+  Question :- We have three activity A, B and C . Actvity A start B and B start C. and app goes into background by pressing
+              home button. 
+             What happen when you press app launcher . 
+  Answer :-   With Launchmode Standard and singleTop   
+                      with pressing App launcher , App will bring the background activity on front resuming same state.
+                      so in this case Activity C will come in foreground.
+              With launchmode singleTask and SingleInstance
+                      App will kill all top activity and start the Launcher activitiy.
